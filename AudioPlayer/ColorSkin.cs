@@ -6,29 +6,29 @@ using System.Threading.Tasks;
 
 namespace AudioPlayer
 {
-    class ColorSkin: Skin
+    class ColorSkin: Skin //A.L2.Player1/1
     {
-        ConsoleColor CnsClr { get; set; }
-        public ColorSkin() : this (0)
+        ConsoleColor CnsClr { get; set; } //A.L2.Player1/1
+        public ColorSkin() : this (0) //A.L2.Player1/1
         {
-            CnsClr = ConsoleColor.Magenta;
+            CnsClr = ConsoleColor.Magenta; //A.L2.Player1/1
         }
-        public ColorSkin(ConsoleColor clr) : base()
+        public ColorSkin(ConsoleColor clr) : base() //A.L2.Player1/1
         {
-            CnsClr = clr;
+            CnsClr = clr; //A.L2.Player1/1
         }
-        public override void Clear()
+        public override void Clear() //A.L2.Player1/1
         {
-            Console.Clear();
-            Console.WriteLine("All has been cleared");
+            Console.Clear(); //A.L2.Player1/1
+            Console.WriteLine("All has been cleared"); //A.L2.Player1/1
         }
 
-        public override void Render(string str)
+        public override void Render(string str) //A.L2.Player1/1
         {
-            string s = str;
-            Console.BackgroundColor = CnsClr;
-            Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine(s);
+            string s = str; //A.L2.Player1/1
+            Console.BackgroundColor = CnsClr; //A.L2.Player1/1
+            Console.ForegroundColor = ConsoleColor.DarkRed; //A.L2.Player1/1
+            Console.WriteLine(s); //A.L2.Player1/1
         }
     }
 }

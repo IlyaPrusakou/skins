@@ -182,9 +182,9 @@ namespace Audioplayer
         } 
         static void Main(string[] args)
         {
-            ColorSkin ColorSkn = new ColorSkin(ConsoleColor.Blue);
-            ClassicSkin ClassicSkn = new ClassicSkin(); 
-            Player player = new Player(ColorSkn);
+            ColorSkin ColorSkn = new ColorSkin(ConsoleColor.Blue); //A.L2.Player1/1
+            ClassicSkin ClassicSkn = new ClassicSkin();  //A.L2.Player1/1
+            Player player = new Player(ColorSkn); //A.L2.Player1/1
             player.songs = new List<Song>(); 
             for (int i = 0; i < 25; i++) 
             {
