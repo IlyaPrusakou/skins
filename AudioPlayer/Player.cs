@@ -37,14 +37,14 @@ namespace Audioplayer
         public List<Song> songs; 
         public Random rnd = new Random();
         public CompareHelper Comp = new CompareHelper();
-        public Skin SkinForm { get; set; }
+        public Skin SkinForm { get; set; } //A.L2.Player1/1
         public Player()
         {
 
         }
-        public Player(Skin skn)
+        public Player(Skin skn) //A.L2.Player1/1
         {
-            SkinForm = skn;
+            SkinForm = skn; //A.L2.Player1/1
         }
         public bool Playing
         {
@@ -81,7 +81,7 @@ namespace Audioplayer
         {
             foreach (Song item in SongList)
             {
-                SkinForm.Render(item.title);
+                SkinForm.Render(item.title); //A.L2.Player1/1
             }
         }
         public (string Title, bool IsNext, (int Sec, int Min, int Hour)) GetSongData(Song song) //L9-HW-Player-3/3. 
@@ -104,30 +104,30 @@ namespace Audioplayer
                 else if (item.Like == null) { Console.ResetColor(); }
                 string paramertString = $"{tuple.Title}, {item.songGenre} - {tuple.Item3.Hour}:{tuple.Item3.Min}:{tuple.Item3.Sec}";
                 string outputString = paramertString.StringSeparator();
-                SkinForm.Render(outputString);
+                SkinForm.Render(outputString); //A.L2.Player1/1
             }
         }
         public void VolumeUp()
         {
             Volume = Volume + 1;
-            SkinForm.Render($"Volume up {Volume}");
+            SkinForm.Render($"Volume up {Volume}"); //A.L2.Player1/1
 
         }
         public void VolumeDown()
         {
             Volume = Volume - 1;
-            SkinForm.Render("Volume " + Volume);
+            SkinForm.Render("Volume " + Volume); //A.L2.Player1/1
         }
         public void VolumeChange(int Step, string op)
         {
             if (op == "+")
             {
-                SkinForm.Render($"up volume {Step}");
+                SkinForm.Render($"up volume {Step}"); //A.L2.Player1/1
                 Volume = Volume + Step;
             }
             else if (op == "-")
             {
-                SkinForm.Render($"down volume {Step}");
+                SkinForm.Render($"down volume {Step}"); //A.L2.Player1/1
                 Volume = Volume - Step;
             }
         }
@@ -149,7 +149,7 @@ namespace Audioplayer
                 SkinForm.Render("to Play has started");
                 for (int i = 0; i < songs.Count; i++)
                 {
-                    SkinForm.Render(songs[i].title);
+                    SkinForm.Render(songs[i].title); //A.L2.Player1/1
                     System.Threading.Thread.Sleep(2000);
                 }
             }
@@ -158,14 +158,14 @@ namespace Audioplayer
         {
             foreach (Song item in songs) 
             {
-                SkinForm.Render($"{item.title} --- {item.lyrics}");
+                SkinForm.Render($"{item.title} --- {item.lyrics}"); //A.L2.Player1/1
             }
         }
         public bool Stop()
         {
             if (isLock == false)
             {
-                SkinForm.Render("Stop");
+                SkinForm.Render("Stop"); //A.L2.Player1/1
                 playing = false;
             }
             return playing;
@@ -174,7 +174,7 @@ namespace Audioplayer
         {
             if (isLock == false)
             {
-                SkinForm.Render("Start");
+                SkinForm.Render("Start"); //A.L2.Player1/1
                 playing = true;
             }
             return playing;
@@ -184,12 +184,12 @@ namespace Audioplayer
         }
         public void Lock()
         {
-            SkinForm.Render("Player is locked");
+            SkinForm.Render("Player is locked"); //A.L2.Player1/1
             isLock = true;
         }
         public void UnLock()
         {
-            SkinForm.Render("Player is unlocked");
+            SkinForm.Render("Player is unlocked"); //A.L2.Player1/1
             isLock = false;
         }
         public void Load()
